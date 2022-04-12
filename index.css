@@ -24,3 +24,21 @@
     color: #444;
     margin: 0;
 }
+
+#gallery-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#gallery-section .gallery-card {
+    position: relative;
+    width: 320px;
+    height: 160px;
+
+    background-color: #ccc;
+    background-position: center;
+    background-size: cover;
+    margin: .25rem;
+}
