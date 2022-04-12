@@ -8,3 +8,15 @@ html, body {
 
     background-color: rgb(255, 255, 255);
 }
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}

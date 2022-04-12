@@ -1,0 +1,26 @@
+#hello-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hello-section img {
+    position: relative;
+    max-width: 50%;
+    width: 200px;
+}
+
+#hello-section h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 200;
+    color: #40a;
+}
+
+#hello-section p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #444;
+    margin: 0;
+}
