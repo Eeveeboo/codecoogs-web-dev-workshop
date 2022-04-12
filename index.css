@@ -1,0 +1,65 @@
+#hello-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hello-section img {
+    position: relative;
+    max-width: 50%;
+    width: 200px;
+}
+
+#hello-section h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 200;
+    color: #40a;
+}
+
+#hello-section p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #444;
+    margin: 0;
+}
+
+#gallery-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#gallery-section .gallery-card {
+    position: relative;
+    width: 320px;
+    height: 160px;
+
+    background-color: #ccc;
+    background-position: center;
+    background-size: cover;
+    margin: .25rem;
+}
+
+#contact-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact-me-section a {
+    background-color: #9900ff;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+
+    padding: 1.25rem 4rem;
+    border-radius: .5rem;
+
+    margin-bottom: 1.25rem;
+}
