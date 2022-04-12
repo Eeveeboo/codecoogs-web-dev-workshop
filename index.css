@@ -42,3 +42,24 @@
     background-size: cover;
     margin: .25rem;
 }
+
+#contact-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact-me-section a {
+    background-color: #9900ff;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+
+    padding: 1.25rem 4rem;
+    border-radius: .5rem;
+
+    margin-bottom: 1.25rem;
+}
