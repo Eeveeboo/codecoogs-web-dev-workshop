@@ -1,0 +1,90 @@
+#hello-section {
+    /* Remember flex is an easy way to center boxes */
+    display: flex;
+    /* column mode for a vertical stack */
+    flex-direction: column;
+    /* Align centered horizontally */
+    align-items: center;
+}
+
+#hello-section img {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    /* max-width tells the box that at no point can it 
+     * be bigger than 50% of the width of it's parent box */
+    max-width: 50%;
+    /* since we are using max-width, width just acts like the default width */
+    width: 200px;
+}
+
+#hello-section h2 {
+    /* Style the text to look nicer */
+    text-align: center;
+    font-size: 24px;
+    font-weight: 200;
+    color: #40a;
+}
+#hello-section p {
+    /* Style the text to look nicer */
+    text-align: center;
+    font-size: 16px;
+    font-weight: 200;
+    color: #444;
+    /* Remove the default margin from this paragraph element */
+    margin: 0;
+}
+
+#gallery-section {
+    /* flex is also a great way to create galleries */
+    display: flex;
+    /* center boxes horizontally */
+    justify-content: center;
+    /* row mode for horizontal */
+    flex-direction: row;
+    /* enable wrapping to turn it into a grid */
+    flex-wrap: wrap;
+}
+
+#gallery-section .gallery-card {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    width: 320px;
+    height: 180px;
+
+    /* Before the image loads set a color to act as a placeholder */
+    background-color: #ccc;
+    /* Set the image to be centered */
+    background-position: center;
+    /* cover = scale to fill*/
+    background-size: cover;
+    /* add some breathing room */
+    margin: .25rem;
+}
+
+#contact-me-section {
+    /* flex is an easy way to center boxes */
+    display: flex;
+    /* column mode for a vertical stack */
+    flex-direction: column;
+    /* Align centered horizontally */
+    align-items: center;
+}
+
+#contact-me-section a {
+    /* Set the background color since we're styling this like a button */
+    background-color: #9900ff;
+
+    /* Make the text look nicer*/
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+
+    /* Add some breathing room */
+    padding: 1.25rem 4rem;
+    /* Soften the corners */
+    border-radius: .5rem;
+    
+    /* Add a margin below to look balanced on the page */
+    margin-bottom: 1.25rem;
+}

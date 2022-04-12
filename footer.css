@@ -1,0 +1,32 @@
+footer {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    width: 100%;
+    height: 100px;
+
+    /* I'm setting the background to a dark gray */
+    background-color: #666;
+}
+
+.footer-content {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    /* HTML by default is really good at showing one item per line
+     * using display:flex is an easy way to align objects 
+     * horizontally without lots of extra work */
+    display: flex;
+    /* row for horizontal */
+    flex-direction: row;
+
+    /* Center everything */
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p {
+    /* Make the text white */
+    color: #fff;
+}

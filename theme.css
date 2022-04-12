@@ -1,0 +1,33 @@
+/* Anything we may need in multiple pages goes in this file */
+
+html, body {
+    /* "Browser Reset", browsers always set these values 
+       slightly differently so let's override them with 
+       our own values so we know how our website will look */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Set the default font for our page */
+    font-family: sans-serif;
+    /* Set the background color for our page*/
+    background-color: rgb(255, 255, 255);
+}
+
+.content {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    width: 100%;
+}
+.section {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    width: 100%;
+
+    /* Lets give our content some breathing room */
+    padding: 1rem;
+    /* When setting the size AND padding box-sizing:border-box
+     * prevents weird things from happening*/
+    box-sizing: border-box;
+}
