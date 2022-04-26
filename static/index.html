@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Meta (page info/configuration) tags-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Set the title of the tab-->
+  <title>Evelyne Go</title>
+  <!--Link Stylesheets-->
+  <link rel="stylesheet" type="text/css" href="theme.css"/>
+  <link rel="stylesheet" type="text/css" href="header.css"/>
+  <link rel="stylesheet" type="text/css" href="index.css"/>
+  <link rel="stylesheet" type="text/css" href="footer.css"/>
+</head>
+<body>
+  <!--Header-->
+  <header>
+    <!--Invisible input for overlay menu-->
+    <input type="checkbox" id="menu"/>
+    <div class="header-content center-content">
+      <!--Logo and Header-->
+      <div class="header-left">
+        <img class="header-logo" src="logo.png"/>
+        <h1>EVELYNE GO</h1>
+      </div>
+      <!--Desktop Menu-->
+      <div class="header-right desktop-header">
+        <a href="https://instagram.com/eeveeb00" target="_blank">Instagram</a>
+        <a href="https://patcatgames.com" target="_blank">My Company</a>
+      </div>
+      <!--Mobile Menu-->
+      <div class="header-right mobile-header">
+        <label class="header-icon" for="menu">
+          <div class="header-menu-icon"></div>
+        </label>
+      </div>
+    </div>
+    <!--Menu Overlay-->
+    <div class="menu-overlay">
+      <div class="menu-overlay-content center-content">
+        <label class="header-icon" for="menu">
+          <div class="header-close-icon"></div>
+        </label>
+        <a href="https://instagram.com/eeveeb00" target="_blank">INSTAGRAM</a>
+        <a href="https://patcatgames.com" target="_blank">MY COMPANY</a>
+        <a href="mailto:evelyne@patcatgames.com">CONTACT ME</a>
+      </div>
+    </div>
+  </header>
+
+  <!--Page Content-->
+  <div class="content">
+    <!--Hello Section-->
+    <div class="section center-content" id="hello-section">
+      <img src="me.png">
+      <h2>Hi there! I'm Evelyne and I make games.</h2>
+      <p>I specialize in virtual reality and optimization. I've been coding for over 9 years, and professionally for the past 5 years.</p>
+    </div>
+    <!--Gallery Section-->
+    <div class="section center-content" id="gallery-section">
+      <div class="gallery-card" 
+        style="background-image:url(gallery/card1.png)"></div>
+        <div class="gallery-card"
+        style="background-image:url(gallery/card2.jpg)"></div>
+        <div class="gallery-card"
+        style="background-image:url(gallery/card3.png)"></div>
+        <div class="gallery-card"
+        style="background-image:url(gallery/card4.jpg)"></div>
+        <div class="gallery-card"
+        style="background-image:url(gallery/card5.jpg)"></div>
+        <div class="gallery-card"
+        style="background-image:url(gallery/card6.jpg)"></div>
+    </div>
+    <!--Footer Section-->
+    <div class="section center-content" id="contact-me-section">
+      <a href="mailto:evelyne@patcatgames.com">Contact Me</a>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <footer>
+    <div class="footer-content center-content">
+      <p>Copyright © 2022 Evelyne Go</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -14,6 +14,12 @@ footer {
     width: 100%;
     height: 100%;
 
+    /* Set the max width to be frendlier to wide screens */
+    max-width: 1000px;
+
+    /* Center the content using auto margin, works on flex and block display styles */
+    margin: 0 auto;
+
     /* HTML by default is really good at showing one item per line
      * using display:flex is an easy way to align objects 
      * horizontally without lots of extra work */
