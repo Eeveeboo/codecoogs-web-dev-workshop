@@ -43,6 +43,12 @@
     flex-direction: row;
     /* enable wrapping to turn it into a grid */
     flex-wrap: wrap;
+
+    /* Set the max width to be frendlier to wide screens */
+    max-width: 1200px;
+
+    /* Center the content using auto margin, works on flex and block display styles */
+    margin: 0 auto;
 }
 
 #gallery-section .gallery-card {

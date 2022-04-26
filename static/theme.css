@@ -31,3 +31,11 @@ html, body {
      * prevents weird things from happening*/
     box-sizing: border-box;
 }
+
+/* Utility class to center certain content containers */
+.center-content {
+    /* Set the max width to be frendlier to wide screens */
+    max-width: 1200px;
+    /* Center the content using auto margin, works on flex and block display styles */
+    margin: 0 auto;
+}

@@ -1,0 +1,269 @@
+/* Header Section */
+header {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    width: 100%;
+    height: 100px;
+
+    /* I chose an off-white for my header color */
+    /*background-color: #ccc;*/
+}
+
+/* To keep things tidy all content is inside this box 
+ * instead of header section */
+.header-content {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    /* HTML by default is really good at showing one item per line
+     * using display:flex is an easy way to align objects 
+     * horizontally without lots of extra work */
+    display: flex;
+    /* row for horizontal */
+    flex-direction: row;
+    /* pushes boxes inside away from each other */
+    justify-content: space-between;
+}
+
+/* Instead of having seperate rules for .header-left and
+ * .header-right they can share makeup by using a ',' */
+.header-left, .header-right {
+    /* display:flex is an easy way to align objects horizontally */
+    display: flex;
+    /* row for horizontal */
+    flex-direction: row;
+    /* align-items:center for vertical centering of boxes */
+    align-items: center;
+
+    /* padding so we don't feel cramped, 1rem = 8px */
+    padding: 1rem;
+}
+
+.header-left .header-logo {
+    /* We're setting the size so set the position to relative */
+    position: relative;
+    width: 64px;
+    height: 64px;
+
+    /* Add rounded corners */
+    border-radius: 50%;
+
+    /* I used a PNG so add a pretty background here 
+       I'm using a gradient but you can just provide a normal color as well */
+    background: linear-gradient(#ff00ff, #9900ff);
+}
+.header-left h1 {
+    /* Remove the default Margin from Headers*/
+    margin: 0;
+
+    /* Make the Font look nicer */
+    color: #9900ff;
+    letter-spacing: 4px;
+    font-size: 28px;
+    font-weight: 100;
+
+    /* add padding to make it not feel cramped, 1rem = 8px */
+    padding-left: 1rem;
+    /* Add padding to center vertically perfectly */
+    padding-top: .2rem;
+}
+.header-right a {
+    /* Set the link color */
+    color: #777;
+    /* Remove the underline (I think it looks cleaner) */
+    text-decoration: none;
+    /* add padding to make it not feel cramped, 1rem = 8px */
+    padding-left: 1rem;
+    /* Prevent the text from wrapping */
+    white-space: nowrap;
+}
+
+/* Hide the mobile header element by default */
+.mobile-header {
+    display: none;
+}
+/* These rules will only be considered while the width of the page is less than 550px */
+@media only screen and (max-width: 550px) {
+    /* While page with < 550px, hide the desktop header element */
+    .desktop-header {
+        display: none;
+    }
+    /* While page with < 550px, show the mobile header element */
+    .mobile-header {
+        display: flex;
+    }
+}
+
+/* Header Icon Styling */
+.header-icon {
+    /* We're setting the size so we need to set a position mode */
+    position: relative;
+    width: 24px;
+    height: 24px;
+    /* Change the cursor to a pointer when hovering over it */
+    cursor: pointer;
+}
+
+/* Creating the center menu bar */
+.header-icon .header-menu-icon {
+    /* We're setting the size so we need to set a position mode */
+    position: absolute; /* absolute positioning does not affect the size of the parent or position of sibling elements */
+    width: 24px;
+    height: 3px;
+    /* Align this bar in the center (vertically) of the 24px container .header-icon*/
+    top: 10.5px;
+    /* Soften the bar by rounding the corners */
+    border-radius: 1.5px;
+    /* Set the background color to a gray*/
+    background-color: #777;
+}
+/* Creating the top menu bar, we're using the psudo element :before instead of adding extra <divs> */
+.header-icon .header-menu-icon:before {
+    /* psudo elements need the "content" to be set to appear */
+    content: "";
+    /* We're setting the size so we need to set a position mode */
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    /* Push the bottom away to align this bar above the center */
+    bottom: 8px;
+    left: 0;
+    /* Soften the bar by rounding the corners */
+    border-radius: 1.5px;
+    /* Set the background color to a gray*/
+    background-color: #777;
+}
+/* Creating the bottom menu bar, we're using the psudo element :before instead of adding extra <divs> */
+.header-icon .header-menu-icon:after {
+    /* psudo elements need the "content" to be set to appear */
+    content: "";
+    /* We're setting the size so we need to set a position mode */
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    /* Push the top away to align this bar below the center */
+    top: 8px;
+    left: 0;
+    /* Soften the bar by rounding the corners */
+    border-radius: 1.5px;
+    /* Set the background color to a gray*/
+    background-color: #777;
+}
+
+/* Hide the checkbox input we're using to operate the menu */
+header #menu {
+    display: none;
+}
+/* Menu Overlay */
+.menu-overlay {
+    /* Fixed positioning, like absolute positioning does not affect the parent div or sibling divs bt it also ignores page scroll */
+    position: fixed;
+    /* Align to the edges of the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Set the background color to a slightly transparent black */
+    background-color: rgba(0,0,0,.9);
+    /* Use z-index to bring this overlay to the front */
+    z-index: 100;
+    /* Hide By Default, normally we'd do this with display:none;
+     * however so we can fade it in we're going to disable touch and mouse events as well as opacity to 0 */
+     pointer-events: none;
+     opacity: 0;
+    /* Set the opacity as a transitionable property */
+    transition: opacity .2s ease;
+}
+/* When the hidden menu checkbox is checked, reenable clicks and touches as well as set opacity to 1 */
+header #menu:checked ~ .menu-overlay {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.menu-overlay .menu-overlay-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Position the header-icon in the top right */
+.menu-overlay .menu-overlay-content .header-icon {
+    /* We're setting the size so we need to set a position mode */
+    position: absolute;
+    top: 38px;
+    right: 1rem;
+}
+/* Style the links in the menu overlay */
+.menu-overlay .menu-overlay-content a {
+    /* We're not setting the size of this div but we do want it's children to be positioned relatively to it*/
+    position: relative;
+    /* Style the text */
+    font-size: 28px;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 28px;
+    font-weight: 100;
+    color: #fff;
+    /* Add some breathing room to the text*/
+    padding: .5rem;
+}
+/* For a stylized underline we're using a psudo element instead of adding another child div */
+.menu-overlay .menu-overlay-content a:after {
+    /* psudo elements need the "content" to be set to appear */
+    content: "";
+    /* We're setting the size so we need to set a position mode */
+    position: absolute;
+    height: 2.5px;
+    /* Instead of width 100%, we can stretch to satisfy the constraints left 0 and right 0*/
+    left: 0;
+    right: 0;
+    /* Set the background color to transparent white */
+    background-color: rgba(255,255,255,0);
+    /* Set the background-color as an animatable property */
+    transition: background-color 0.15s ease;
+    /* Move The bar away from the bottom a little bit */
+    bottom: 4px;
+}
+/* When this link is hovered over set the background-color of the custom underline to white */
+.menu-overlay .menu-overlay-content a:hover:after {
+    background-color: #fff;
+}
+/* Create the close icon */
+.header-icon .header-close-icon:before { /* Left */
+    /* psudo elements need the "content" to be set to appear */
+    content: "";
+    /* We're setting the size so we need to set a position mode */
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    /* Center vertically in it's parent */
+    top: 10.5px;
+    /* Soften the corners */
+    border-radius: 1.5px;
+    /* Set the background color */
+    background-color: #fff;
+    /* Rotate CW 45deg */
+    transform: rotate(45deg);
+}
+.header-icon .header-close-icon:after { /* Right */
+    /* psudo elements need the "content" to be set to appear */
+    content: "";
+    /* We're setting the size so we need to set a position mode */
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    /* Center vertically in it's parent */
+    top: 10.5px;
+    /* Soften the corners */
+    border-radius: 1.5px;
+    /* Set the background color */
+    background-color: #fff;
+    /* Rotate CCW 45deg */
+    transform: rotate(-45deg);
+}
